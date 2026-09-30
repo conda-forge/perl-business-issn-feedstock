@@ -2,7 +2,7 @@
 
 package:
   name: perl-business-issn
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Business-ISSN-{{ version }}.tar.gz
@@ -15,7 +15,7 @@ build:
     make test
     make install
   noarch: generic
-  number: 0
+  number: 1
   run_exports:
     weak:
       - perl-business-issn ={{ version }}
@@ -36,8 +36,8 @@ about:
   home: https://metacpan.org/pod/Business::ISSN
   license: Artistic-2.0
   license_file:
-    - {{ environ["PREFIX"] }}/man/man1/perlartistic.1
-    - {{ environ["PREFIX"] }}/man/man1/perlgpl.1
+    - {{ environ["PREFIX"] }}/lib/perl5/core_perl/pod/perlartistic.pod
+    - {{ environ["PREFIX"] }}/lib/perl5/core_perl/pod/perlgpl.pod
   summary: Perl package to work with International Standard Serial Numbers
 
 extra:
